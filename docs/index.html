@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguimiento ERM 2026 · Lima &amp; San Borja</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --green:#2ecc71; --orange:#ff8c42; --navy:#1a4d7a; --gold:#d4af37;
+    --red:#e74c3c; --blue:#3a8dde; --bg:#0b0e13; --panel:#13202b; --line:#243240;
+    --txt:#e7e9ea; --mut:#8b98a5;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        background:radial-gradient(ellipse at top,#15202b 0%,var(--bg) 70%); color:var(--txt); line-height:1.55; min-height:100vh; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:22px 16px 70px; }
+
+  /* HERO */
+  .hero{ text-align:center; padding:14px 8px 6px; }
+  .kicker{ display:inline-block; background:#c0392b; color:#fff; font-size:11px; font-weight:800;
+           letter-spacing:2px; padding:5px 14px; border-radius:4px; }
+  .hero h1{ font-size:clamp(20px,4.5vw,32px); font-weight:900; color:#fff; margin-top:12px; }
+  .hero .sub{ color:var(--mut); font-size:clamp(12px,2.6vw,15px); margin-top:4px; }
+  .hero .meta{ color:var(--gold); font-size:13px; margin-top:8px; font-weight:700; }
+  .count{ display:inline-block; background:var(--panel); border:1px solid var(--line); border-radius:10px;
+          padding:8px 16px; margin-top:10px; font-size:14px; }
+  .count b{ color:var(--gold); font-size:20px; }
+
+  /* AVISO */
+  .aviso{ background:#2a2510; border:1px solid var(--gold); border-radius:10px; padding:12px 14px;
+          margin:18px 0; font-size:13px; color:#e8dcb0; display:flex; gap:10px; }
+  .aviso .ic{ font-size:18px; }
+
+  /* CANDIDATO */
+  .cand{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px;
+         margin:20px 0; border-top:4px solid var(--navy); }
+  .cand.orange{ border-top-color:var(--orange); }
+  .cand.navy{ border-top-color:var(--navy); }
+  .chead{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  .photo{ width:88px; height:88px; border-radius:14px; flex-shrink:0; display:flex; align-items:center;
+          justify-content:center; font-size:34px; font-weight:900; color:#fff; overflow:hidden;
+          background:linear-gradient(160deg,var(--navy),#0d2a45); border:2px solid var(--line); }
+  .cand.orange .photo{ background:linear-gradient(160deg,#a8541f,#5e2f10); }
+  .photo img{ width:100%; height:100%; object-fit:cover; }
+  .cinfo{ flex:1; min-width:200px; }
+  .cinfo h2{ font-size:clamp(17px,3.4vw,23px); color:#fff; }
+  .cinfo .alias{ color:var(--mut); font-weight:600; font-size:14px; }
+  .pills{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+  .pill{ font-size:12px; padding:4px 10px; border-radius:20px; background:#0e171f; border:1px solid var(--line); color:#cfe0ef; }
+  .pill.party{ background:rgba(26,77,122,.25); border-color:var(--navy); }
+  .pill.muni{ background:rgba(212,175,55,.12); border-color:var(--gold); color:#e8dcb0; }
+  .badge-v{ font-size:11px; font-weight:800; padding:4px 10px; border-radius:20px; letter-spacing:.5px; }
+  .badge-v.no{ background:rgba(231,76,60,.18); border:1px solid var(--red); color:#ffb4ab; }
+  .badge-v.si{ background:rgba(46,204,113,.18); border:1px solid var(--green); color:#a8f0c8; }
+  .src{ font-size:11px; color:var(--mut); margin-top:8px; }
+  .src a{ color:var(--blue); text-decoration:none; } .src a:hover{ text-decoration:underline; }
+  .estado{ background:#0e171f; border:1px dashed var(--line); border-radius:8px; padding:9px 12px;
+           font-size:12.5px; color:#b9c6d1; margin-top:12px; }
+  .perfil{ font-size:14px; color:#c9d3db; margin-top:12px; }
+
+  /* FODA */
+  .foda{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px; }
+  .q{ border-radius:12px; padding:12px 14px; border:1px solid var(--line); background:#0e171f; }
+  .q h3{ font-size:13px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; margin-bottom:8px;
+         display:flex; align-items:center; gap:7px; }
+  .q.f{ border-left:4px solid var(--green); } .q.f h3{ color:var(--green); }
+  .q.o{ border-left:4px solid var(--blue); } .q.o h3{ color:var(--blue); }
+  .q.d{ border-left:4px solid var(--orange); } .q.d h3{ color:var(--orange); }
+  .q.a{ border-left:4px solid var(--red); } .q.a h3{ color:var(--red); }
+  .q ul{ list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .q li{ font-size:13px; color:#d3dde5; padding-left:16px; position:relative; }
+  .q li::before{ content:"▸"; position:absolute; left:0; color:var(--mut); }
+  .q li a.ft{ display:inline-block; margin-left:5px; font-size:10.5px; font-weight:700; color:var(--gold);
+              text-decoration:none; border:1px solid rgba(212,175,55,.4); border-radius:5px; padding:0 5px; vertical-align:middle; }
+  .q li a.ft:hover{ background:rgba(212,175,55,.15); }
+  .empty{ font-size:13px; color:var(--mut); font-style:italic; padding:6px 0; }
+
+  /* CHART */
+  .ctx{ background:#0e171f; border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:16px; }
+  .ctx .ct-title{ font-size:13px; font-weight:700; color:#cfe0ef; }
+  .ctx .ct-note{ font-size:11.5px; color:var(--mut); margin:3px 0 8px; }
+  .ctx canvas{ max-height:200px; }
+
+  /* REFS */
+  .refs{ margin-top:34px; }
+  .refs h2{ font-size:18px; color:#fff; border-bottom:2px solid var(--navy); padding-bottom:6px; margin-bottom:10px; }
+  .refs ol{ counter-reset:r; list-style:none; }
+  .refs li{ counter-increment:r; font-size:13px; padding:6px 0 6px 28px; position:relative; border-bottom:1px solid #1a2530; }
+  .refs li::before{ content:counter(r)"."; position:absolute; left:0; color:var(--gold); font-weight:700; }
+  .refs a{ color:var(--blue); text-decoration:none; } .refs a:hover{ text-decoration:underline; }
+
+  footer{ text-align:center; color:var(--mut); font-size:12px; margin-top:30px; }
+  .err{ background:#5c1a1a; padding:14px; border-radius:10px; text-align:center; margin:20px 0; }
+
+  @media(max-width:620px){ .foda{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="kicker">● USO INTERNO · NO PÚBLICO</span>
+    <h1 id="h-titulo">Seguimiento ERM 2026</h1>
+    <div class="sub" id="h-sub"></div>
+    <div class="meta" id="h-meta"></div>
+    <div class="count" id="h-count"></div>
+  </div>
+
+  <div style="text-align:center;margin:8px 0 0;">
+    <a href="encuestas.html" style="display:inline-block;font-size:13px;color:#cfe0ef;text-decoration:none;background:#13202b;border:1px solid #243240;padding:7px 16px;border-radius:20px;">📈 Ver tracker de encuestas online (evolución de votos por hora) →</a>
+  </div>
+
+  <div class="aviso">
+    <span class="ic">⚠️</span>
+    <span id="h-aviso"></span>
+  </div>
+
+  <div id="cands"></div>
+
+  <div class="refs">
+    <h2>Fuentes / Referencias</h2>
+    <ol id="refs"></ol>
+  </div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fuente = f => f && f.u ? ` <a class="ft" href="${esc(f.u)}" target="_blank" rel="noopener">Fuente: ${esc(f.n)} ↗</a>` : '';
+
+function lista(items, cls){
+  if(!items || !items.length) return `<div class="empty">Sin datos cargados. Completar con inteligencia interna verificada.</div>`;
+  return `<ul>${items.map(i=>`<li>${esc(i.t)}${fuente(i.f)}</li>`).join('')}</ul>`;
+}
+
+function candCard(c){
+  const foto = c.foto_oficial
+    ? `<img src="${esc(c.foto_oficial)}" alt="${esc(c.nombre)}" onerror="this.parentNode.textContent='${esc(c.iniciales)}'">`
+    : esc(c.iniciales);
+  const badge = c.verificado_jne
+    ? `<span class="badge-v si">✓ VERIFICADO JNE</span>`
+    : `<span class="badge-v no">⚠ NO VERIFICADO EN JNE</span>`;
+  return `
+  <div class="cand ${esc(c.color||'navy')}">
+    <div class="chead">
+      <div class="photo">${foto}</div>
+      <div class="cinfo">
+        <h2>${esc(c.nombre)} <span class="alias">${esc(c.alias||'')}</span></h2>
+        <div class="pills">
+          <span class="pill muni">🏛️ ${esc(c.municipio)}</span>
+          <span class="pill party">${esc(c.partido)}</span>
+          <span class="pill">${esc(c.cargo_postula)}</span>
+          ${badge}
+        </div>
+        <div class="src">
+          Nombre: <a href="${esc(c.fuente_nombre.u)}" target="_blank" rel="noopener">${esc(c.fuente_nombre.n)} ↗</a>
+          &nbsp;·&nbsp; Foto: <a href="${esc(c.fuente_foto.u)}" target="_blank" rel="noopener">${esc(c.fuente_foto.n)} ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="estado"><b>Estado de inscripción:</b> ${esc(c.estado_inscripcion)}</div>
+    <div class="perfil"><b>Perfil:</b> ${esc(c.perfil)}${fuente(c.fuente_perfil)}</div>
+
+    <div class="foda">
+      <div class="q f"><h3>💪 Fortalezas</h3>${lista(c.foda.fortalezas)}</div>
+      <div class="q o"><h3>🚀 Oportunidades</h3>${lista(c.foda.oportunidades)}</div>
+      <div class="q d"><h3>⚠️ Debilidades</h3>${lista(c.foda.debilidades)}</div>
+      <div class="q a"><h3>🛡️ Amenazas</h3>${lista(c.foda.amenazas)}</div>
+    </div>
+
+    ${c.contexto ? `
+    <div class="ctx">
+      <div class="ct-title">${esc(c.contexto.titulo)}</div>
+      <div class="ct-note">${esc(c.contexto.nota||'')} ${c.contexto.fuente?`· <a class="ft" href="${esc(c.contexto.fuente.u)}" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;">Fuente: ${esc(c.contexto.fuente.n)} ↗</a>`:''}</div>
+      <canvas id="chart-${esc(c.id)}"></canvas>
+    </div>` : ''}
+  </div>`;
+}
+
+function drawChart(c){
+  if(!c.contexto || !c.contexto.datos) return;
+  const el = document.getElementById('chart-'+c.id);
+  if(!el) return;
+  new Chart(el, {
+    type:'bar',
+    data:{
+      labels: c.contexto.datos.map(d=>d.etiqueta),
+      datasets:[{ data:c.contexto.datos.map(d=>d.valor),
+        backgroundColor: c.color==='orange' ? '#ff8c42' : '#3a8dde', borderRadius:5 }]
+    },
+    options:{ indexAxis:'y', plugins:{legend:{display:false}},
+      scales:{ x:{ ticks:{color:'#8b98a5', callback:v=>v+'%'}, grid:{color:'#1a2530'} },
+               y:{ ticks:{color:'#cfe0ef'}, grid:{display:false} } } }
+  });
+}
+
+function diasPara(fechaISO){
+  const hoy = new Date(); const f = new Date(fechaISO+'T00:00:00');
+  return Math.max(0, Math.ceil((f - hoy)/86400000));
+}
+
+fetch('data.json?_='+Date.now()).then(r=>r.json()).then(d=>{
+  const m = d.meta;
+  document.getElementById('h-titulo').textContent = m.titulo;
+  document.getElementById('h-sub').textContent = m.subtitulo;
+  document.getElementById('h-meta').textContent = `${m.eleccion} · Votación: ${m.fecha_eleccion} · Actualizado: ${m.actualizado}`;
+  document.getElementById('h-count').innerHTML = `⏳ Faltan <b>${diasPara(m.fecha_eleccion)}</b> días para la votación`;
+  document.getElementById('h-aviso').textContent = m.aviso;
+  document.getElementById('cands').innerHTML = d.candidatos.map(candCard).join('');
+  d.candidatos.forEach(drawChart);
+  document.getElementById('refs').innerHTML = d.referencias.map(r=>`<li><a href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.n)} ↗</a></li>`).join('');
+  document.getElementById('foot').innerHTML = `Tablero interno de seguimiento electoral · Datos con fuente citada · ${esc(m.actualizado)}`;
+}).catch(e=>{
+  document.getElementById('cands').innerHTML = `<div class="err">No se pudo cargar <code>data.json</code>: ${esc(e.message)}<br>Si abriste el archivo con doble clic, usa un servidor local: <code>python -m http.server</code> dentro de la carpeta <code>docs/</code>.</div>`;
+});
+</script>
+</body>
+</html>

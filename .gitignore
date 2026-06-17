@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# BD SQLite: se reconstruye desde docs/encuestas.json en cada corrida.
+# No se versiona (un binario no es fusionable y rompería el rebase del workflow).
+tracker/encuestas.db

@@ -1,0 +1,21 @@
+{
+  "_comentario": "Encuestas (TotalPoll) a trackear en encuestas.com.pe. Solo se LEE la pantalla de resultados (read-only); NO se emiten votos. 'destacar' resalta candidatos en el dashboard.",
+  "ajax_url": "https://encuestas.com.pe/wp-admin/admin-ajax.php",
+  "polls": [
+    {
+      "id": 22042,
+      "municipio": "Lima",
+      "etiqueta": "Alcaldía de Lima",
+      "pagina": "https://encuestas.com.pe/registra-a-tu-candidato/",
+      "destacar": ["Luis Rubio", "Lucho Rubio"]
+    },
+    {
+      "id": 22198,
+      "municipio": "San Borja",
+      "etiqueta": "Alcaldía de San Borja",
+      "pagina": "https://encuestas.com.pe/sanborja-junio-2026/",
+      "destacar": ["Carlos Merino"],
+      "_nota": "Confirmado: 22198 = 'Encuesta Alcaldía de San Borja'. Carlos Merino (Renovación Popular) aparece liderando esta encuesta online."
+    }
+  ]
+}

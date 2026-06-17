@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracker de encuestas online · Lima &amp; San Borja</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{ --green:#2ecc71; --orange:#ff8c42; --navy:#1a4d7a; --gold:#d4af37; --red:#e74c3c;
+         --blue:#3a8dde; --bg:#0b0e13; --panel:#13202b; --line:#243240; --txt:#e7e9ea; --mut:#8b98a5; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        background:radial-gradient(ellipse at top,#15202b 0%,var(--bg) 70%); color:var(--txt); line-height:1.5; min-height:100vh; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:22px 16px 70px; }
+  .hero{ text-align:center; padding:10px 8px; }
+  .kicker{ display:inline-block; background:#c0392b; color:#fff; font-size:11px; font-weight:800; letter-spacing:2px; padding:5px 14px; border-radius:4px; }
+  .hero h1{ font-size:clamp(19px,4vw,30px); font-weight:900; color:#fff; margin-top:12px; }
+  .hero .sub{ color:var(--mut); font-size:13px; margin-top:5px; }
+  .tabs{ display:flex; gap:8px; justify-content:center; margin:14px 0; flex-wrap:wrap; }
+  .tabs a{ font-size:13px; color:#cfe0ef; text-decoration:none; background:var(--panel); border:1px solid var(--line); padding:6px 14px; border-radius:20px; }
+  .tabs a:hover{ border-color:var(--gold); }
+  .aviso{ background:#3a1f12; border:1px solid var(--orange); border-radius:10px; padding:12px 14px; margin:14px 0; font-size:12.5px; color:#ffd9bf; display:flex; gap:10px; }
+
+  .poll{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; margin:20px 0; border-top:4px solid var(--navy); }
+  .poll.sb{ border-top-color:var(--orange); }
+  .poll h2{ font-size:clamp(16px,3vw,21px); color:#fff; }
+  .poll .preg{ color:var(--mut); font-size:13px; margin-top:4px; }
+  .poll .tot{ display:inline-block; margin-top:8px; font-size:12px; color:#cfe0ef; background:#0e171f; border:1px solid var(--line); border-radius:20px; padding:4px 12px; }
+  .poll .links{ font-size:11.5px; margin-top:8px; }
+  .poll .links a{ color:var(--blue); text-decoration:none; } .poll .links a:hover{ text-decoration:underline; }
+
+  .rank{ margin-top:16px; display:flex; flex-direction:column; gap:7px; }
+  .row{ display:grid; grid-template-columns:155px 1fr 92px; align-items:center; gap:10px; font-size:13px; }
+  .row .nm{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#d3dde5; }
+  .row.hl .nm{ color:var(--gold); font-weight:800; }
+  .bar{ height:18px; background:#0e171f; border-radius:6px; overflow:hidden; border:1px solid var(--line); }
+  .bar > div{ height:100%; background:var(--blue); border-radius:6px 0 0 6px; }
+  .poll.sb .bar > div{ background:var(--orange); }
+  .row.hl .bar > div{ background:var(--gold); }
+  .row .vv{ text-align:right; color:#aab8c2; font-variant-numeric:tabular-nums; }
+  .row .vv b{ color:#fff; }
+
+  .chart-box{ background:#0e171f; border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:16px; }
+  .chart-head{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px; }
+  .chart-head .ct{ font-size:13px; color:#cfe0ef; font-weight:700; }
+  .toggle{ display:flex; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .toggle button{ background:#0e171f; color:var(--mut); border:0; padding:5px 12px; font-size:12px; cursor:pointer; }
+  .toggle button.on{ background:var(--navy); color:#fff; }
+  canvas{ max-height:300px; }
+  .onecut{ font-size:12px; color:var(--mut); font-style:italic; margin-top:8px; }
+  footer{ text-align:center; color:var(--mut); font-size:12px; margin-top:30px; }
+  .err{ background:#5c1a1a; padding:14px; border-radius:10px; text-align:center; margin:20px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <span class="kicker">● TRACKER · USO INTERNO</span>
+    <h1>Evolución de encuestas online — Lima &amp; San Borja</h1>
+    <div class="sub" id="sub"></div>
+  </div>
+
+  <div class="tabs">
+    <a href="index.html">← Ficha &amp; FODA de candidatos</a>
+    <a id="srclink" href="#" target="_blank" rel="noopener">Fuente: encuestas.com.pe ↗</a>
+  </div>
+
+  <div class="aviso">
+    <span>⚠️</span>
+    <span><b>Encuesta online no probabilística.</b> Los datos provienen de un sondeo abierto (plugin TotalPoll) en
+    encuestas.com.pe, donde vota quien quiere y la campaña puede movilizar votos. <b>No es una muestra representativa
+    ni una proyección electoral.</b> Úsese solo como señal de momentum/actividad en esa plataforma. Se lee la pantalla
+    pública de resultados; no se emiten votos.</span>
+  </div>
+
+  <div id="polls"></div>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const COLORS = ['#3a8dde','#2ecc71','#ff8c42','#d4af37','#e74c3c','#9b59b6','#1abc9c','#e67e22'];
+const charts = {};
+
+function destacado(nombre, destacar){
+  const norm = s => String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();
+  return (destacar||[]).some(x => norm(nombre) === norm(x));
+}
+
+function pollBlock(p, idx){
+  const sb = (p.municipio||'').toLowerCase().includes('borja');
+  const maxv = Math.max(1, ...p.candidatos.map(c=>c.votos));
+  const top = p.candidatos.slice(0, 10);
+  const rows = top.map(c=>{
+    const hl = destacado(c.nombre, p.destacar);
+    return `<div class="row ${hl?'hl':''}">
+      <div class="nm" title="${esc(c.nombre)}">${hl?'★ ':''}${esc(c.nombre)}</div>
+      <div class="bar"><div style="width:${(c.votos/maxv*100).toFixed(1)}%"></div></div>
+      <div class="vv"><b>${c.votos}</b> · ${c.pct}%</div>
+    </div>`;
+  }).join('');
+
+  return `<div class="poll ${sb?'sb':''}">
+    <h2>${esc(p.municipio)} — ${esc(p.etiqueta||'')}</h2>
+    <div class="preg">${esc(p.pregunta||'')}</div>
+    <span class="tot">🗳️ ${p.total} votos · ${p.candidatos.length} candidatos · ${p.historial.length} corte(s)</span>
+    <div class="links">
+      ${p.pagina?`<a href="${esc(p.pagina)}" target="_blank" rel="noopener">Página de la encuesta ↗</a>`:''}
+    </div>
+    <div class="rank">${rows}</div>
+    <div class="chart-box">
+      <div class="chart-head">
+        <span class="ct">📈 Evolución en el tiempo</span>
+        <div class="toggle" data-poll="${idx}">
+          <button class="on" data-metric="votos">Votos</button>
+          <button data-metric="pct">%</button>
+        </div>
+      </div>
+      <canvas id="ch-${idx}"></canvas>
+      ${p.historial.length<2?`<div class="onecut">Aún hay un solo corte. La línea de tendencia se irá dibujando conforme el scraper guarde nuevos cortes (cada hora).</div>`:''}
+    </div>
+  </div>`;
+}
+
+function series(p, metric){
+  // top 6 por votos del último corte + destacados. Clave estable = c.key (nombre+partido).
+  const items = p.candidatos.slice(0,6);
+  p.candidatos.forEach(c=>{ if(destacado(c.nombre,p.destacar) && !items.some(x=>x.key===c.key)) items.push(c); });
+  const labels = p.historial.map(h=> h.ts_peru || h.ts);
+  return {
+    labels,
+    datasets: items.map((c,i)=>{
+      const hl = destacado(c.nombre, p.destacar);
+      return {
+        label: (hl?'★ ':'')+c.nombre,
+        data: p.historial.map(h => h.por_candidato[c.key] ? h.por_candidato[c.key][metric] : null),
+        borderColor: hl ? '#d4af37' : COLORS[i%COLORS.length],
+        backgroundColor: 'transparent',
+        borderWidth: hl ? 3.5 : 1.8,
+        pointRadius: hl ? 4 : 2.5,
+        tension: 0.25, spanGaps: true
+      };
+    })
+  };
+}
+
+function drawChart(p, idx, metric){
+  const el = document.getElementById('ch-'+idx); if(!el) return;
+  if(charts[idx]) charts[idx].destroy();
+  charts[idx] = new Chart(el, {
+    type:'line', data: series(p, metric),
+    options:{
+      plugins:{ legend:{ labels:{ color:'#cfe0ef', font:{size:11}, boxWidth:14 } } },
+      scales:{
+        x:{ ticks:{ color:'#8b98a5', maxRotation:0, font:{size:10} }, grid:{ color:'#1a2530' } },
+        y:{ ticks:{ color:'#8b98a5', callback:v=> metric==='pct'? v+'%':v }, grid:{ color:'#1a2530' }, beginAtZero:true }
+      }
+    }
+  });
+}
+
+fetch('encuestas.json?_='+Date.now()).then(r=>r.json()).then(d=>{
+  document.getElementById('sub').textContent = 'Actualizado: '+d.actualizado;
+  if(d.fuente){ const a=document.getElementById('srclink'); a.href=d.fuente.u; a.textContent='Fuente: '+d.fuente.n+' ↗'; }
+  document.getElementById('polls').innerHTML = d.polls.map(pollBlock).join('');
+  d.polls.forEach((p,i)=> drawChart(p,i,'votos'));
+  document.querySelectorAll('.toggle').forEach(t=>{
+    t.querySelectorAll('button').forEach(b=> b.addEventListener('click', ()=>{
+      const idx=+t.dataset.poll; t.querySelectorAll('button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+      drawChart(d.polls[idx], idx, b.dataset.metric);
+    }));
+  });
+  document.getElementById('foot').innerHTML = 'Datos: lectura pública de encuestas.com.pe (TotalPoll). Encuesta no probabilística. · '+esc(d.actualizado);
+}).catch(e=>{
+  document.getElementById('polls').innerHTML = `<div class="err">No se pudo cargar <code>encuestas.json</code>: ${esc(e.message)}<br>Corre el scraper (<code>python tracker/encuestas_scraper.py</code>) y sirve la carpeta con <code>python -m http.server</code>.</div>`;
+});
+</script>
+</body>
+</html>
