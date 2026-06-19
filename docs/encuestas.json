@@ -1752,6 +1752,141 @@
               "pct": 0.0
             }
           }
+        },
+        {
+          "ts": "2026-06-19T15:55:04Z",
+          "ts_peru": "19/06/2026 10:55",
+          "total": 858,
+          "por_candidato": {
+            "Carlos Bruce - Somos Perú": {
+              "votos": 228,
+              "pct": 26.57
+            },
+            "Luis Rubio - Renovación Popular": {
+              "votos": 165,
+              "pct": 19.23
+            },
+            "Francis Allison - Avanza País": {
+              "votos": 99,
+              "pct": 11.54
+            },
+            "Samuel Daza - Fuerza Popular": {
+              "votos": 83,
+              "pct": 9.67
+            },
+            "Ricardo Belmont - Obras": {
+              "votos": 77,
+              "pct": 8.97
+            },
+            "Alberto Tejada - Acción Popular": {
+              "votos": 44,
+              "pct": 5.13
+            },
+            "Susel Paredes - Ahora Nación": {
+              "votos": 43,
+              "pct": 5.01
+            },
+            "Carlos Tarazona Perez - Alianza Partido De Los Trabajadores - Inka Perú": {
+              "votos": 29,
+              "pct": 3.38
+            },
+            "Yorry Warthon - Fe en el Perú": {
+              "votos": 22,
+              "pct": 2.56
+            },
+            "Otro": {
+              "votos": 19,
+              "pct": 2.21
+            },
+            "Carlos Neuhaus - PPC": {
+              "votos": 12,
+              "pct": 1.4
+            },
+            "Elizabeth León - Frente Esperanza": {
+              "votos": 10,
+              "pct": 1.17
+            },
+            "Jorge Muñoz": {
+              "votos": 8,
+              "pct": 0.93
+            },
+            "Paul Davis Jaimes Blanco - Progresemos": {
+              "votos": 7,
+              "pct": 0.82
+            },
+            "George Otsu": {
+              "votos": 3,
+              "pct": 0.35
+            },
+            "Daniel Urresti - Podemos Perú": {
+              "votos": 3,
+              "pct": 0.35
+            },
+            "Jose Balarezo Vasquez": {
+              "votos": 1,
+              "pct": 0.12
+            },
+            "Sofia Franco - Fe en el Perú": {
+              "votos": 1,
+              "pct": 0.12
+            },
+            "Richard Acuña - Alianza para el Progreso": {
+              "votos": 1,
+              "pct": 0.12
+            },
+            "Felipe Castillo – Podemos Perú": {
+              "votos": 1,
+              "pct": 0.12
+            },
+            "Rudecindo Vega Carreazo - Primero La Gente": {
+              "votos": 1,
+              "pct": 0.12
+            },
+            "Manuel Fernando Del Aguila Zuñiga - Salvemos Al Perú": {
+              "votos": 1,
+              "pct": 0.12
+            },
+            "Jorge Ugarte": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Yuri Castro - Perú Libre": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Miguel Saldaña - Podemos Perú": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Luis Huette - Pueblo Consciente": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Diana Álvarez Calderón": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "William Paco Antenor Castillo Davila - Todos Con El Pueblo": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Segundo Valdez Zavala - FREPAP": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Oswaldo Vargas - Juntos Por El Perú": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Luis Alberto Huette Tolentino - Pueblo Consciente": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Javier Enrique Yovera Ojeda - Perú Libre": {
+              "votos": 0,
+              "pct": 0.0
+            }
+          }
         }
       ],
       "candidatos": [
@@ -1759,113 +1894,113 @@
           "key": "Carlos Bruce - Somos Perú",
           "nombre": "Carlos Bruce",
           "partido": "Somos Perú",
-          "votos": 227,
-          "pct": 27.45
+          "votos": 228,
+          "pct": 26.57
         },
         {
           "key": "Luis Rubio - Renovación Popular",
           "nombre": "Luis Rubio",
           "partido": "Renovación Popular",
-          "votos": 164,
-          "pct": 19.83
+          "votos": 165,
+          "pct": 19.23
         },
         {
           "key": "Francis Allison - Avanza País",
           "nombre": "Francis Allison",
           "partido": "Avanza País",
-          "votos": 96,
-          "pct": 11.61
+          "votos": 99,
+          "pct": 11.54
         },
         {
           "key": "Samuel Daza - Fuerza Popular",
           "nombre": "Samuel Daza",
           "partido": "Fuerza Popular",
-          "votos": 82,
-          "pct": 9.92
+          "votos": 83,
+          "pct": 9.67
         },
         {
           "key": "Ricardo Belmont - Obras",
           "nombre": "Ricardo Belmont",
           "partido": "Obras",
-          "votos": 56,
-          "pct": 6.77
+          "votos": 77,
+          "pct": 8.97
         },
         {
           "key": "Alberto Tejada - Acción Popular",
           "nombre": "Alberto Tejada",
           "partido": "Acción Popular",
           "votos": 44,
-          "pct": 5.32
+          "pct": 5.13
         },
         {
           "key": "Susel Paredes - Ahora Nación",
           "nombre": "Susel Paredes",
           "partido": "Ahora Nación",
-          "votos": 42,
-          "pct": 5.08
+          "votos": 43,
+          "pct": 5.01
         },
         {
           "key": "Carlos Tarazona Perez - Alianza Partido De Los Trabajadores - Inka Perú",
           "nombre": "Carlos Tarazona Perez",
           "partido": "Alianza Partido De Los Trabajadores - Inka Perú",
           "votos": 29,
-          "pct": 3.51
+          "pct": 3.38
         },
         {
           "key": "Yorry Warthon - Fe en el Perú",
           "nombre": "Yorry Warthon",
           "partido": "Fe en el Perú",
           "votos": 22,
-          "pct": 2.66
+          "pct": 2.56
         },
         {
           "key": "Otro",
           "nombre": "Otro",
           "partido": "",
-          "votos": 17,
-          "pct": 2.06
+          "votos": 19,
+          "pct": 2.21
         },
         {
           "key": "Carlos Neuhaus - PPC",
           "nombre": "Carlos Neuhaus",
           "partido": "PPC",
           "votos": 12,
-          "pct": 1.45
+          "pct": 1.4
         },
         {
           "key": "Elizabeth León - Frente Esperanza",
           "nombre": "Elizabeth León",
           "partido": "Frente Esperanza",
           "votos": 10,
-          "pct": 1.21
+          "pct": 1.17
         },
         {
           "key": "Jorge Muñoz",
           "nombre": "Jorge Muñoz",
           "partido": "",
           "votos": 8,
-          "pct": 0.97
+          "pct": 0.93
         },
         {
           "key": "Paul Davis Jaimes Blanco - Progresemos",
           "nombre": "Paul Davis Jaimes Blanco",
           "partido": "Progresemos",
           "votos": 7,
-          "pct": 0.85
+          "pct": 0.82
         },
         {
           "key": "George Otsu",
           "nombre": "George Otsu",
           "partido": "",
           "votos": 3,
-          "pct": 0.36
+          "pct": 0.35
         },
         {
           "key": "Daniel Urresti - Podemos Perú",
           "nombre": "Daniel Urresti",
           "partido": "Podemos Perú",
-          "votos": 2,
-          "pct": 0.24
+          "votos": 3,
+          "pct": 0.35
         },
         {
           "key": "Jose Balarezo Vasquez",
@@ -1980,7 +2115,7 @@
           "pct": 0.0
         }
       ],
-      "total": 827,
+      "total": 858,
       "municipio": "Lima",
       "etiqueta": "Alcaldía de Lima",
       "pagina": "https://encuestas.com.pe/registra-a-tu-candidato/",
@@ -2858,6 +2993,73 @@
               "pct": 0.0
             }
           }
+        },
+        {
+          "ts": "2026-06-19T15:55:04Z",
+          "ts_peru": "19/06/2026 10:55",
+          "total": 1339,
+          "por_candidato": {
+            "Carlos Merino - Renovación Popular": {
+              "votos": 816,
+              "pct": 60.94
+            },
+            "Javier Diez - Renovación Popular": {
+              "votos": 360,
+              "pct": 26.89
+            },
+            "Roberto Montoya - Avanza País": {
+              "votos": 113,
+              "pct": 8.44
+            },
+            "Gina Casanova Mera - Somos Perú": {
+              "votos": 17,
+              "pct": 1.27
+            },
+            "Alberto Tejada Conroy - Acción Popular": {
+              "votos": 17,
+              "pct": 1.27
+            },
+            "Willyans José Soriano Cabrera - PPC": {
+              "votos": 5,
+              "pct": 0.37
+            },
+            "Otro": {
+              "votos": 3,
+              "pct": 0.22
+            },
+            "Juan Carlos Zevallos": {
+              "votos": 2,
+              "pct": 0.15
+            },
+            "Joel Edmundo Miranda Villanueva - Adelante Perú": {
+              "votos": 2,
+              "pct": 0.15
+            },
+            "José Valdez": {
+              "votos": 1,
+              "pct": 0.07
+            },
+            "Carlos Antezana Young": {
+              "votos": 1,
+              "pct": 0.07
+            },
+            "Raiza Guadalupe Najarro De Sierra - Primero La Gente": {
+              "votos": 1,
+              "pct": 0.07
+            },
+            "Jose Antonio Navarro Merea - Sícreo": {
+              "votos": 1,
+              "pct": 0.07
+            },
+            "Marco Peña León": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Juan Fernando Pilco Castañeda - APRA": {
+              "votos": 0,
+              "pct": 0.0
+            }
+          }
         }
       ],
       "candidatos": [
@@ -2866,42 +3068,49 @@
           "nombre": "Carlos Merino",
           "partido": "Renovación Popular",
           "votos": 816,
-          "pct": 61.26
+          "pct": 60.94
         },
         {
           "key": "Javier Diez - Renovación Popular",
           "nombre": "Javier Diez",
           "partido": "Renovación Popular",
-          "votos": 359,
-          "pct": 26.95
+          "votos": 360,
+          "pct": 26.89
         },
         {
           "key": "Roberto Montoya - Avanza País",
           "nombre": "Roberto Montoya",
           "partido": "Avanza País",
-          "votos": 112,
-          "pct": 8.41
+          "votos": 113,
+          "pct": 8.44
         },
         {
           "key": "Gina Casanova Mera - Somos Perú",
           "nombre": "Gina Casanova Mera",
           "partido": "Somos Perú",
           "votos": 17,
-          "pct": 1.28
+          "pct": 1.27
         },
         {
           "key": "Alberto Tejada Conroy - Acción Popular",
           "nombre": "Alberto Tejada Conroy",
           "partido": "Acción Popular",
           "votos": 17,
-          "pct": 1.28
+          "pct": 1.27
+        },
+        {
+          "key": "Willyans José Soriano Cabrera - PPC",
+          "nombre": "Willyans José Soriano Cabrera",
+          "partido": "PPC",
+          "votos": 5,
+          "pct": 0.37
         },
         {
           "key": "Otro",
           "nombre": "Otro",
           "partido": "",
           "votos": 3,
-          "pct": 0.23
+          "pct": 0.22
         },
         {
           "key": "Juan Carlos Zevallos",
@@ -2922,39 +3131,32 @@
           "nombre": "José Valdez",
           "partido": "",
           "votos": 1,
-          "pct": 0.08
+          "pct": 0.07
         },
         {
-          "key": "Willyans José Soriano Cabrera - PPC",
-          "nombre": "Willyans José Soriano Cabrera",
-          "partido": "PPC",
+          "key": "Carlos Antezana Young",
+          "nombre": "Carlos Antezana Young",
+          "partido": "",
           "votos": 1,
-          "pct": 0.08
+          "pct": 0.07
         },
         {
           "key": "Raiza Guadalupe Najarro De Sierra - Primero La Gente",
           "nombre": "Raiza Guadalupe Najarro De Sierra",
           "partido": "Primero La Gente",
           "votos": 1,
-          "pct": 0.08
+          "pct": 0.07
         },
         {
           "key": "Jose Antonio Navarro Merea - Sícreo",
           "nombre": "Jose Antonio Navarro Merea",
           "partido": "Sícreo",
           "votos": 1,
-          "pct": 0.08
+          "pct": 0.07
         },
         {
           "key": "Marco Peña León",
           "nombre": "Marco Peña León",
-          "partido": "",
-          "votos": 0,
-          "pct": 0.0
-        },
-        {
-          "key": "Carlos Antezana Young",
-          "nombre": "Carlos Antezana Young",
           "partido": "",
           "votos": 0,
           "pct": 0.0
@@ -2967,7 +3169,7 @@
           "pct": 0.0
         }
       ],
-      "total": 1332,
+      "total": 1339,
       "municipio": "San Borja",
       "etiqueta": "Alcaldía de San Borja",
       "pagina": "https://encuestas.com.pe/sanborja-junio-2026/",
@@ -2977,7 +3179,7 @@
       "pregunta": "Encuesta Alcaldía de San Borja - ¿Por cuál de los siguientes candidatos votaría? (Cierra el 09/07/2026)"
     }
   ],
-  "actualizado": "19/06/2026 07:39 (hora Perú)",
+  "actualizado": "19/06/2026 10:55 (hora Perú)",
   "fuente": {
     "n": "encuestas.com.pe (encuesta online TotalPoll, no probabilística)",
     "u": "https://encuestas.com.pe/"
