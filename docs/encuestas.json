@@ -28136,6 +28136,97 @@
               "pct": 0.0
             }
           }
+        },
+        {
+          "ts": "2026-07-15T17:03:37Z",
+          "ts_peru": "15/07/2026 12:03",
+          "total": 3281,
+          "por_candidato": {
+            "Jessica Viviana Linares Romero - Partido Político Integridad Democrática": {
+              "votos": 758,
+              "pct": 23.1
+            },
+            "Luis Isael Rubio Idrogo - Renovación Popular": {
+              "votos": 637,
+              "pct": 19.41
+            },
+            "Alberto Tejada - Acción Popular": {
+              "votos": 583,
+              "pct": 17.77
+            },
+            "Francis Allison Oyague - Avanza País": {
+              "votos": 521,
+              "pct": 15.88
+            },
+            "Carlos Ricardo Bruce Montes de Oca - Partido Democrático Somos Perú": {
+              "votos": 206,
+              "pct": 6.28
+            },
+            "Susel Ana María Paredes Piqué - Ahora Nación - AN": {
+              "votos": 138,
+              "pct": 4.21
+            },
+            "Yehude Simón Munaro - Coalición Transformadora Tierra Verde": {
+              "votos": 92,
+              "pct": 2.8
+            },
+            "Ricardo Pablo Belmont Cassinelli - Partido Cívico Obras": {
+              "votos": 82,
+              "pct": 2.5
+            },
+            "Daniel Belizario Urresti Elera - Podemos Perú": {
+              "votos": 63,
+              "pct": 1.92
+            },
+            "Samuel Daza - Fuerza Popular": {
+              "votos": 54,
+              "pct": 1.65
+            },
+            "Luis Alberto Huette Tolentino - Partido Político Pueblo Consciente": {
+              "votos": 48,
+              "pct": 1.46
+            },
+            "Edgardo Renán De Pomar Vizcarra - Partido Popular Cristiano - PPC": {
+              "votos": 35,
+              "pct": 1.07
+            },
+            "Victoria Betzabé La Cruz Garcés - Partido Morado": {
+              "votos": 23,
+              "pct": 0.7
+            },
+            "Elizabeth María del Rosario León Chinchay - Partido Frente de la Esperanza 2021": {
+              "votos": 16,
+              "pct": 0.49
+            },
+            "Oswaldo Hernán Vargas Cuéllar - Juntos por el Perú": {
+              "votos": 12,
+              "pct": 0.37
+            },
+            "Flor de María Hurtado Valdez - Partido Demócrata Verde": {
+              "votos": 6,
+              "pct": 0.18
+            },
+            "Samir Frank Quispe Caballero - Batalla Perú": {
+              "votos": 5,
+              "pct": 0.15
+            },
+            "Santiago Rosendo Abarca León - Visión Perú": {
+              "votos": 2,
+              "pct": 0.06
+            },
+            "Segundo Valdez Zavala - Frente Popular Agrícola FIA del Perú (FREPAP)": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Sandro Caller Gutiérrez - Partido Patriótico del Perú": {
+              "votos": 0,
+              "pct": 0.0
+            },
+            "Rubén José Ramírez Mateo - Partido Político Nacional Perú Libre": {
+              "votos": 0,
+              "pct": 0.0
+            }
+          }
         }
       ],
       "candidatos": [
@@ -28144,28 +28235,28 @@
           "nombre": "Jessica Viviana Linares Romero",
           "partido": "Partido Político Integridad Democrática",
           "votos": 758,
-          "pct": 23.12
+          "pct": 23.1
         },
         {
           "key": "Luis Isael Rubio Idrogo - Renovación Popular",
           "nombre": "Luis Isael Rubio Idrogo",
           "partido": "Renovación Popular",
           "votos": 637,
-          "pct": 19.43
+          "pct": 19.41
         },
         {
           "key": "Alberto Tejada - Acción Popular",
           "nombre": "Alberto Tejada",
           "partido": "Acción Popular",
-          "votos": 582,
-          "pct": 17.75
+          "votos": 583,
+          "pct": 17.77
         },
         {
           "key": "Francis Allison Oyague - Avanza País",
           "nombre": "Francis Allison Oyague",
           "partido": "Avanza País",
           "votos": 521,
-          "pct": 15.89
+          "pct": 15.88
         },
         {
           "key": "Carlos Ricardo Bruce Montes de Oca - Partido Democrático Somos Perú",
@@ -28185,8 +28276,8 @@
           "key": "Yehude Simón Munaro - Coalición Transformadora Tierra Verde",
           "nombre": "Yehude Simón Munaro",
           "partido": "Coalición Transformadora Tierra Verde",
-          "votos": 91,
-          "pct": 2.78
+          "votos": 92,
+          "pct": 2.8
         },
         {
           "key": "Ricardo Pablo Belmont Cassinelli - Partido Cívico Obras",
@@ -28287,7 +28378,7 @@
           "pct": 0.0
         }
       ],
-      "total": 3279,
+      "total": 3281,
       "municipio": "Lima",
       "etiqueta": "Alcaldía de Lima",
       "pagina": "https://encuestas.com.pe/registra-a-tu-candidato/",
@@ -41805,6 +41896,41 @@
               "pct": 0.0
             }
           }
+        },
+        {
+          "ts": "2026-07-15T17:03:37Z",
+          "ts_peru": "15/07/2026 12:03",
+          "total": 79,
+          "por_candidato": {
+            "Javier Diez - Renovación Popular": {
+              "votos": 44,
+              "pct": 55.7
+            },
+            "Gina Casanova Mera - Somos Perú": {
+              "votos": 10,
+              "pct": 12.66
+            },
+            "Roberth Montoya - Avanza País": {
+              "votos": 9,
+              "pct": 11.39
+            },
+            "Willyans José Soriano Cabrera - PPC": {
+              "votos": 7,
+              "pct": 8.86
+            },
+            "Alberto Tejada Conroy - Acción Popular": {
+              "votos": 6,
+              "pct": 7.59
+            },
+            "Joel Edmundo Miranda Villanueva - Adelante Perú": {
+              "votos": 3,
+              "pct": 3.8
+            },
+            "Juan Fernando Pilco Castañeda - APRA": {
+              "votos": 0,
+              "pct": 0.0
+            }
+          }
         }
       ],
       "candidatos": [
@@ -41813,42 +41939,42 @@
           "nombre": "Javier Diez",
           "partido": "Renovación Popular",
           "votos": 44,
-          "pct": 56.41
+          "pct": 55.7
         },
         {
           "key": "Gina Casanova Mera - Somos Perú",
           "nombre": "Gina Casanova Mera",
           "partido": "Somos Perú",
           "votos": 10,
-          "pct": 12.82
+          "pct": 12.66
         },
         {
           "key": "Roberth Montoya - Avanza País",
           "nombre": "Roberth Montoya",
           "partido": "Avanza País",
           "votos": 9,
-          "pct": 11.54
+          "pct": 11.39
         },
         {
           "key": "Willyans José Soriano Cabrera - PPC",
           "nombre": "Willyans José Soriano Cabrera",
           "partido": "PPC",
           "votos": 7,
-          "pct": 8.97
+          "pct": 8.86
         },
         {
           "key": "Alberto Tejada Conroy - Acción Popular",
           "nombre": "Alberto Tejada Conroy",
           "partido": "Acción Popular",
-          "votos": 5,
-          "pct": 6.41
+          "votos": 6,
+          "pct": 7.59
         },
         {
           "key": "Joel Edmundo Miranda Villanueva - Adelante Perú",
           "nombre": "Joel Edmundo Miranda Villanueva",
           "partido": "Adelante Perú",
           "votos": 3,
-          "pct": 3.85
+          "pct": 3.8
         },
         {
           "key": "Juan Fernando Pilco Castañeda - APRA",
@@ -41858,7 +41984,7 @@
           "pct": 0.0
         }
       ],
-      "total": 78,
+      "total": 79,
       "municipio": "San Borja",
       "etiqueta": "Alcaldía de San Borja",
       "pagina": "https://encuestas.com.pe/sanborja-junio-2026/",
@@ -41868,7 +41994,7 @@
       "pregunta": "Encuesta Alcaldía de San Borja - ¿Por cuál de los siguientes candidatos votaría? (Cierra el 12/08/2026)"
     }
   ],
-  "actualizado": "15/07/2026 10:16 (hora Perú)",
+  "actualizado": "15/07/2026 12:03 (hora Perú)",
   "fuente": {
     "n": "encuestas.com.pe (encuesta online TotalPoll, no probabilística)",
     "u": "https://encuestas.com.pe/"
