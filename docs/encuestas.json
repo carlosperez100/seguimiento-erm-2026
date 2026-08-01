@@ -46427,6 +46427,97 @@
               "pct": 0.03
             }
           }
+        },
+        {
+          "ts": "2026-08-01T12:53:03Z",
+          "ts_peru": "01/08/2026 07:53",
+          "total": 3618,
+          "por_candidato": {
+            "Francis Allison Oyague - Avanza País": {
+              "votos": 801,
+              "pct": 22.14
+            },
+            "Oswaldo Hernán Vargas Cuéllar - Juntos por el Perú": {
+              "votos": 716,
+              "pct": 19.79
+            },
+            "Luis Isael Rubio Idrogo - Renovación Popular": {
+              "votos": 687,
+              "pct": 18.99
+            },
+            "Ricardo Pablo Belmont Cassinelli - Partido Cívico Obras": {
+              "votos": 317,
+              "pct": 8.76
+            },
+            "Alberto Tejada - Acción Popular": {
+              "votos": 308,
+              "pct": 8.51
+            },
+            "Carlos Ricardo Bruce Montes de Oca - Partido Democrático Somos Perú": {
+              "votos": 207,
+              "pct": 5.72
+            },
+            "Susel Ana María Paredes Piqué - Ahora Nación - AN": {
+              "votos": 153,
+              "pct": 4.23
+            },
+            "Samuel Daza - Fuerza Popular": {
+              "votos": 140,
+              "pct": 3.87
+            },
+            "Yehude Simón Munaro - Coalición Transformadora Tierra Verde": {
+              "votos": 50,
+              "pct": 1.38
+            },
+            "Edgardo Renán De Pomar Vizcarra - Partido Popular Cristiano - PPC": {
+              "votos": 50,
+              "pct": 1.38
+            },
+            "Santiago Rosendo Abarca León - Visión Perú": {
+              "votos": 47,
+              "pct": 1.3
+            },
+            "Daniel Belizario Urresti Elera - Podemos Perú": {
+              "votos": 47,
+              "pct": 1.3
+            },
+            "Elizabeth María del Rosario León Chinchay - Partido Frente de la Esperanza 2021": {
+              "votos": 37,
+              "pct": 1.02
+            },
+            "Luis Alberto Huette Tolentino - Partido Político Pueblo Consciente": {
+              "votos": 22,
+              "pct": 0.61
+            },
+            "Rubén José Ramírez Mateo - Partido Político Nacional Perú Libre": {
+              "votos": 12,
+              "pct": 0.33
+            },
+            "Victoria Betzabé La Cruz Garcés - Partido Morado": {
+              "votos": 10,
+              "pct": 0.28
+            },
+            "Segundo Valdez Zavala - Frente Popular Agrícola FIA del Perú (FREPAP)": {
+              "votos": 4,
+              "pct": 0.11
+            },
+            "Flor de María Hurtado Valdez - Partido Demócrata Verde": {
+              "votos": 4,
+              "pct": 0.11
+            },
+            "Jessica Viviana Linares Romero - Partido Político Integridad Democrática": {
+              "votos": 3,
+              "pct": 0.08
+            },
+            "Sandro Caller Gutiérrez - Partido Patriótico del Perú": {
+              "votos": 2,
+              "pct": 0.06
+            },
+            "Samir Frank Quispe Caballero - Batalla Perú": {
+              "votos": 1,
+              "pct": 0.03
+            }
+          }
         }
       ],
       "candidatos": [
@@ -67131,6 +67222,41 @@
               "pct": 0.35
             }
           }
+        },
+        {
+          "ts": "2026-08-01T12:53:03Z",
+          "ts_peru": "01/08/2026 07:53",
+          "total": 286,
+          "por_candidato": {
+            "Willyans José Soriano Cabrera - PPC": {
+              "votos": 98,
+              "pct": 34.27
+            },
+            "Javier Diez - Renovación Popular": {
+              "votos": 79,
+              "pct": 27.62
+            },
+            "Roberth Montoya - Avanza País": {
+              "votos": 58,
+              "pct": 20.28
+            },
+            "Alberto Tejada Conroy - Acción Popular": {
+              "votos": 23,
+              "pct": 8.04
+            },
+            "Gina Casanova Mera - Somos Perú": {
+              "votos": 20,
+              "pct": 6.99
+            },
+            "Joel Edmundo Miranda Villanueva - Adelante Perú": {
+              "votos": 7,
+              "pct": 2.45
+            },
+            "Juan Fernando Pilco Castañeda - APRA": {
+              "votos": 1,
+              "pct": 0.35
+            }
+          }
         }
       ],
       "candidatos": [
@@ -67194,7 +67320,7 @@
       "pregunta": "Encuesta Alcaldía de San Borja - ¿Por cuál de los siguientes candidatos votaría? (Cierra el 12/08/2026)"
     }
   ],
-  "actualizado": "01/08/2026 06:54 (hora Perú)",
+  "actualizado": "01/08/2026 07:53 (hora Perú)",
   "fuente": {
     "n": "encuestas.com.pe (encuesta online TotalPoll, no probabilística)",
     "u": "https://encuestas.com.pe/"
