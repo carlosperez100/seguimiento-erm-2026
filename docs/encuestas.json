@@ -58091,6 +58091,97 @@
               "pct": 0.02
             }
           }
+        },
+        {
+          "ts": "2026-08-11T18:44:17Z",
+          "ts_peru": "11/08/2026 13:44",
+          "total": 5934,
+          "por_candidato": {
+            "Oswaldo Vargas Cuéllar - Juntos por el Perú": {
+              "votos": 1272,
+              "pct": 21.44
+            },
+            "Francis Allison Oyague - Avanza País": {
+              "votos": 1181,
+              "pct": 19.9
+            },
+            "Rafael López Aliaga - Renovación Popular": {
+              "votos": 1035,
+              "pct": 17.44
+            },
+            "Segundo Valdez Zavala - Frente Popular Agrícola FIA del Perú (FREPAP)": {
+              "votos": 771,
+              "pct": 12.99
+            },
+            "Carlos Ricardo Bruce Montes de Oca - Partido Democrático Somos Perú": {
+              "votos": 710,
+              "pct": 11.96
+            },
+            "Daniel Belizario Urresti Elera - Podemos Perú": {
+              "votos": 267,
+              "pct": 4.5
+            },
+            "Alberto Tejada - Acción Popular": {
+              "votos": 245,
+              "pct": 4.13
+            },
+            "Samuel Daza - Fuerza Popular": {
+              "votos": 132,
+              "pct": 2.22
+            },
+            "Susel Ana María Paredes Piqué - Ahora Nación - AN": {
+              "votos": 104,
+              "pct": 1.75
+            },
+            "Ricardo Belmont Cassinelli - Partido Cívico Obras": {
+              "votos": 60,
+              "pct": 1.01
+            },
+            "Edgardo Renán De Pomar Vizcarra - Partido Popular Cristiano - PPC": {
+              "votos": 48,
+              "pct": 0.81
+            },
+            "Elizabeth María del Rosario León Chinchay - Partido Frente de la Esperanza 2021": {
+              "votos": 33,
+              "pct": 0.56
+            },
+            "Victoria Betzabé La Cruz Garcés - Partido Morado": {
+              "votos": 27,
+              "pct": 0.46
+            },
+            "Santiago Rosendo Abarca León - Visión Perú": {
+              "votos": 20,
+              "pct": 0.34
+            },
+            "Yehude Simón Munaro - Coalición Transformadora Tierra Verde": {
+              "votos": 12,
+              "pct": 0.2
+            },
+            "Flor de María Hurtado Valdez - Partido Demócrata Verde": {
+              "votos": 5,
+              "pct": 0.08
+            },
+            "Luis Alberto Huette Tolentino - Partido Político Pueblo Consciente": {
+              "votos": 4,
+              "pct": 0.07
+            },
+            "Jessica Viviana Linares Romero - Partido Político Integridad Democrática": {
+              "votos": 3,
+              "pct": 0.05
+            },
+            "Sandro Caller Gutiérrez - Partido Patriótico del Perú": {
+              "votos": 2,
+              "pct": 0.03
+            },
+            "Rubén José Ramírez Mateo - Partido Político Nacional Perú Libre": {
+              "votos": 2,
+              "pct": 0.03
+            },
+            "Samir Frank Quispe Caballero - Batalla Perú": {
+              "votos": 1,
+              "pct": 0.02
+            }
+          }
         }
       ],
       "candidatos": [
@@ -58099,34 +58190,34 @@
           "nombre": "Oswaldo Vargas Cuéllar",
           "partido": "Juntos por el Perú",
           "votos": 1272,
-          "pct": 21.49
+          "pct": 21.44
         },
         {
           "key": "Francis Allison Oyague - Avanza País",
           "nombre": "Francis Allison Oyague",
           "partido": "Avanza País",
-          "votos": 1175,
-          "pct": 19.85
+          "votos": 1181,
+          "pct": 19.9
         },
         {
           "key": "Rafael López Aliaga - Renovación Popular",
           "nombre": "Rafael López Aliaga",
           "partido": "Renovación Popular",
-          "votos": 1032,
+          "votos": 1035,
           "pct": 17.44
         },
         {
           "key": "Segundo Valdez Zavala - Frente Popular Agrícola FIA del Perú (FREPAP)",
           "nombre": "Segundo Valdez Zavala",
           "partido": "Frente Popular Agrícola FIA del Perú (FREPAP)",
-          "votos": 770,
-          "pct": 13.01
+          "votos": 771,
+          "pct": 12.99
         },
         {
           "key": "Carlos Ricardo Bruce Montes de Oca - Partido Democrático Somos Perú",
           "nombre": "Carlos Ricardo Bruce Montes de Oca",
           "partido": "Partido Democrático Somos Perú",
-          "votos": 708,
+          "votos": 710,
           "pct": 11.96
         },
         {
@@ -58134,28 +58225,28 @@
           "nombre": "Daniel Belizario Urresti Elera",
           "partido": "Podemos Perú",
           "votos": 267,
-          "pct": 4.51
+          "pct": 4.5
         },
         {
           "key": "Alberto Tejada - Acción Popular",
           "nombre": "Alberto Tejada",
           "partido": "Acción Popular",
           "votos": 245,
-          "pct": 4.14
+          "pct": 4.13
         },
         {
           "key": "Samuel Daza - Fuerza Popular",
           "nombre": "Samuel Daza",
           "partido": "Fuerza Popular",
-          "votos": 131,
-          "pct": 2.21
+          "votos": 132,
+          "pct": 2.22
         },
         {
           "key": "Susel Ana María Paredes Piqué - Ahora Nación - AN",
           "nombre": "Susel Ana María Paredes Piqué",
           "partido": "Ahora Nación - AN",
           "votos": 104,
-          "pct": 1.76
+          "pct": 1.75
         },
         {
           "key": "Ricardo Belmont Cassinelli - Partido Cívico Obras",
@@ -58182,22 +58273,22 @@
           "key": "Victoria Betzabé La Cruz Garcés - Partido Morado",
           "nombre": "Victoria Betzabé La Cruz Garcés",
           "partido": "Partido Morado",
-          "votos": 26,
-          "pct": 0.44
+          "votos": 27,
+          "pct": 0.46
         },
         {
           "key": "Santiago Rosendo Abarca León - Visión Perú",
           "nombre": "Santiago Rosendo Abarca León",
           "partido": "Visión Perú",
-          "votos": 19,
-          "pct": 0.32
+          "votos": 20,
+          "pct": 0.34
         },
         {
           "key": "Yehude Simón Munaro - Coalición Transformadora Tierra Verde",
           "nombre": "Yehude Simón Munaro",
           "partido": "Coalición Transformadora Tierra Verde",
-          "votos": 11,
-          "pct": 0.19
+          "votos": 12,
+          "pct": 0.2
         },
         {
           "key": "Flor de María Hurtado Valdez - Partido Demócrata Verde",
@@ -58242,7 +58333,7 @@
           "pct": 0.02
         }
       ],
-      "total": 5918,
+      "total": 5934,
       "municipio": "Lima",
       "etiqueta": "Alcaldía de Lima",
       "pagina": "https://encuestas.com.pe/registra-a-tu-candidato/",
@@ -83275,6 +83366,41 @@
               "pct": 0.19
             }
           }
+        },
+        {
+          "ts": "2026-08-11T18:44:17Z",
+          "ts_peru": "11/08/2026 13:44",
+          "total": 518,
+          "por_candidato": {
+            "Willyans José Soriano Cabrera - PPC": {
+              "votos": 176,
+              "pct": 33.98
+            },
+            "Javier Diez - Renovación Popular": {
+              "votos": 168,
+              "pct": 32.43
+            },
+            "Roberth Montoya - Avanza País": {
+              "votos": 63,
+              "pct": 12.16
+            },
+            "Joel Edmundo Miranda Villanueva - Adelante Perú": {
+              "votos": 51,
+              "pct": 9.85
+            },
+            "Alberto Tejada Conroy - Acción Popular": {
+              "votos": 30,
+              "pct": 5.79
+            },
+            "Gina Casanova Mera - Somos Perú": {
+              "votos": 29,
+              "pct": 5.6
+            },
+            "Juan Fernando Pilco Castañeda - APRA": {
+              "votos": 1,
+              "pct": 0.19
+            }
+          }
         }
       ],
       "candidatos": [
@@ -83283,42 +83409,42 @@
           "nombre": "Willyans José Soriano Cabrera",
           "partido": "PPC",
           "votos": 176,
-          "pct": 34.04
+          "pct": 33.98
         },
         {
           "key": "Javier Diez - Renovación Popular",
           "nombre": "Javier Diez",
           "partido": "Renovación Popular",
-          "votos": 167,
-          "pct": 32.3
+          "votos": 168,
+          "pct": 32.43
         },
         {
           "key": "Roberth Montoya - Avanza País",
           "nombre": "Roberth Montoya",
           "partido": "Avanza País",
           "votos": 63,
-          "pct": 12.19
+          "pct": 12.16
         },
         {
           "key": "Joel Edmundo Miranda Villanueva - Adelante Perú",
           "nombre": "Joel Edmundo Miranda Villanueva",
           "partido": "Adelante Perú",
           "votos": 51,
-          "pct": 9.86
+          "pct": 9.85
         },
         {
           "key": "Alberto Tejada Conroy - Acción Popular",
           "nombre": "Alberto Tejada Conroy",
           "partido": "Acción Popular",
           "votos": 30,
-          "pct": 5.8
+          "pct": 5.79
         },
         {
           "key": "Gina Casanova Mera - Somos Perú",
           "nombre": "Gina Casanova Mera",
           "partido": "Somos Perú",
           "votos": 29,
-          "pct": 5.61
+          "pct": 5.6
         },
         {
           "key": "Juan Fernando Pilco Castañeda - APRA",
@@ -83328,7 +83454,7 @@
           "pct": 0.19
         }
       ],
-      "total": 517,
+      "total": 518,
       "municipio": "San Borja",
       "etiqueta": "Alcaldía de San Borja",
       "pagina": "https://encuestas.com.pe/sanborja-junio-2026/",
@@ -83338,7 +83464,7 @@
       "pregunta": "Encuesta Alcaldía de San Borja - ¿Por cuál de los siguientes candidatos votaría? (Cierra el 12/08/2026)"
     }
   ],
-  "actualizado": "11/08/2026 12:46 (hora Perú)",
+  "actualizado": "11/08/2026 13:44 (hora Perú)",
   "fuente": {
     "n": "encuestas.com.pe (encuesta online TotalPoll, no probabilística)",
     "u": "https://encuestas.com.pe/"
