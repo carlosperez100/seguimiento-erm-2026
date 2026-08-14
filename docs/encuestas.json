@@ -88997,6 +88997,45 @@
               "pct": 0.0
             }
           }
+        },
+        {
+          "ts": "2026-08-14T11:35:33Z",
+          "ts_peru": "14/08/2026 06:35",
+          "total": 520,
+          "por_candidato": {
+            "Willyans José Soriano Cabrera - PPC": {
+              "votos": 152,
+              "pct": 29.23
+            },
+            "Javier Diez - Renovación Popular": {
+              "votos": 143,
+              "pct": 27.5
+            },
+            "Roberth Montoya - Avanza País": {
+              "votos": 70,
+              "pct": 13.46
+            },
+            "Joel Edmundo Miranda Villanueva - Adelante Perú": {
+              "votos": 68,
+              "pct": 13.08
+            },
+            "Alberto Tejada Conroy - Acción Popular": {
+              "votos": 52,
+              "pct": 10.0
+            },
+            "Gina Casanova Mera - Somos Perú": {
+              "votos": 33,
+              "pct": 6.35
+            },
+            "Juan Fernando Pilco Castañeda - APRA": {
+              "votos": 2,
+              "pct": 0.38
+            },
+            "José Antonio Navarro Narrea - Sicreo": {
+              "votos": 0,
+              "pct": 0.0
+            }
+          }
         }
       ],
       "candidatos": [
@@ -89067,7 +89106,7 @@
       "pregunta": "Encuesta Alcaldía de San Borja - ¿Por cuál de los siguientes candidatos votaría? (Cierra el 13/08/2026)"
     }
   ],
-  "actualizado": "14/08/2026 05:47 (hora Perú)",
+  "actualizado": "14/08/2026 06:47 (hora Perú)",
   "fuente": {
     "n": "encuestas.com.pe (encuesta online TotalPoll, no probabilística)",
     "u": "https://encuestas.com.pe/"
